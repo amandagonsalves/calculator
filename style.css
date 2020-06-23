@@ -38,6 +38,10 @@ body {
     display: flex;
     justify-content: space-between;
 }
+#date, #time {
+    background-color: rgba(0,0,0,0);
+    border: none;
+}
 #buttons {
     margin: 40px 30px;
 }

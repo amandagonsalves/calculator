@@ -6,6 +6,7 @@ body {
     background-color: rgb(34, 34, 34);
 }
 .content {
+    height: 450px;
     max-width: 400px;
     width: 90%;
     margin: 60px auto;
@@ -15,7 +16,7 @@ body {
     box-shadow: 2px 4px rgb(145, 145, 145);
 }
 #display-border {
-    border: 1px solid rgb(185, 185, 185);
+    border: 1px solid rgb(131, 131, 131);
     box-shadow: 2px 2px rgb(150, 150, 150);
     background-color: rgb(199, 199, 199);
     height: 80px;
@@ -24,14 +25,14 @@ body {
     border-radius: 10px;
 }
 #display {
-    border: 1px solid rgb(185, 185, 185);
+    border: 1px solid rgb(124, 124, 124);
     height: 60px;
     width: 95%;
     margin: 0 auto;
     margin-top: 3%;
     border-radius: 7px;
     background-color: rgba(0,0,0,0.2);
-    box-shadow: 2px 2px rgb(158, 158, 158);
+    box-shadow: 2px 2px rgb(170, 170, 170);
 }
 #buttons {
     margin: 40px 30px;

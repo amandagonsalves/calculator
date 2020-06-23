@@ -22,11 +22,15 @@ function initialize() {
 initialize() */
 class CalcController {
     constructor() {
+
         this._timeEl = document.querySelector('#time');
         this._dateEl = document.querySelector('#date');
-        this._displayCalcEl = document.querySelector('#display');
         this.currentDate;
-        this._locale = 'pt-BR'
+        this._locale = 'pt-BR';
+
+        this._displayCalcEl = document.querySelector('#display');
+        
+        this.initialize()
     }
 
     get displayCalc() {
@@ -63,9 +67,10 @@ class CalcController {
     }
 
     initialize() {
+        this._timeEl.innerHTML = `010101`
         setInterval(()=> {
             setDisplayDateTime()
-        }, 1000)
+        }, 1000) 
     }
 
 }

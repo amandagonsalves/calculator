@@ -34,6 +34,10 @@ body {
     background-color: rgba(0,0,0,0.2);
     box-shadow: 2px 2px rgb(170, 170, 170);
 }
+.time-and-date {
+    display: flex;
+    justify-content: space-between;
+}
 #buttons {
     margin: 40px 30px;
 }
@@ -51,7 +55,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid black;
+    border: 1px solid rgb(88, 88, 88);
     border-radius: 5px;
     height: 50px;
     background-color: rgb(109, 109, 173);

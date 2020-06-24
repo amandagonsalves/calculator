@@ -66,6 +66,7 @@ class CalcController {
 
     cancelEntry() {
         this._operation.pop();
+        this.setLastNumberToDisplay();
     }
 
     setError() {
@@ -105,11 +106,31 @@ class CalcController {
 
     calc() {
         
-        let last = this._operation.pop();
+        let last = '';
+
+        if(this._operation.length > 3) {
+            last = this._operation.pop();
+        } 
 
         let result = this.getResult();
 
-        this._operation = [result, last];
+        if(last === '%') {
+
+            result /= 100;
+
+            this._operation = [result];
+            
+        } else {
+
+            this._operation = [result];
+
+            if(last) {
+                this.pushOperation(last)
+            }
+
+        }
+
+        
 
         this.setLastNumberToDisplay();
 
@@ -194,7 +215,7 @@ class CalcController {
             case 'dot':
                 break;
             case 'equals':
-
+                this.calc();
                 break;
             case '0':
             case '1':

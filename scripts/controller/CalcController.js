@@ -1,26 +1,3 @@
-/* const display = document.querySelector('#display');
-
-
-function timeDate() {
-
-    const currentDate = new Date();
-
-    const time = document.querySelector('#time');
-    const timeEl = currentDate.toLocaleTimeString('pt-BR');
-    time.innerHTML = `<p>${timeEl}</p>`
-
-    const date = document.querySelector('#date');
-    const dateEl = currentDate.toLocaleDateString('pt-BR');
-    date.innerHTML = `<p>${dateEl}</p>`
-
-}
-function initialize() {
-    timeDate()
-    setInterval(()=> {
-        timeDate()
-    },1000)
-}
-initialize()  */
 class CalcController {
     constructor() {
 
@@ -79,7 +56,6 @@ class CalcController {
 
     pushOperation(value) {
         this._operation.push(value);
-        console.log(this._operation);
     }
 
     getLastOperation() {

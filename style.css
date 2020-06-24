@@ -38,14 +38,11 @@ body {
     display: flex;
     justify-content: space-between;
 }
-#date, #time {
+#date, #time, #values {
     background-color: rgba(0,0,0,0);
     border: none;
     margin: 4.5px;
     font-family: 'Roboto Mono', monospace;
-}
-#buttons {
-    
 }
 #buttons {
     margin: 40px 30px;
@@ -69,10 +66,4 @@ body {
     background-color: rgb(109, 109, 173);
     box-shadow: 2px 2px rgb(131, 131, 131);
     cursor: pointer;
-}
-.values p {
-    text-align: right;
-    margin-top: 10px;
-    font-size: 1.8rem;
-    font-family: 'Roboto Mono', monospace;
 }

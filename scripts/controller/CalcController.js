@@ -21,7 +21,7 @@ function initialize() {
     },1000)
 }
 initialize()  */
- class CalcController {
+class CalcController {
     constructor() {
 
         this._timeElement = document.querySelector('#time');
@@ -30,7 +30,7 @@ initialize()  */
         this._locale = 'pt-BR';
 
         this._displayCalcElement = document.querySelector('#values');
-        
+
         this.initialize();
         this._operation = [];
         this.initButtonsEvents();
@@ -38,7 +38,7 @@ initialize()  */
 
     initialize() {
         this.setDisplayDateTime();
-        setInterval(()=> {
+        setInterval(() => {
             this.setDisplayDateTime();
         }, 1000);
     }
@@ -48,15 +48,70 @@ initialize()  */
         this.displayTime = this.currentDate.toLocaleTimeString(this._locale);
     }
 
+    addEventListenerAll(element, events, fn) {
+        events.split(' ').forEach(event => {
+            element.addEventListener(event, fn, false);
+        });
+    }
+
     initButtonsEvents() {
         let buttons = document.querySelectorAll('#buttons > li');
         buttons.forEach((btn, index) => {
             btn.addEventListener('click', e => {
                 let textBtn = btn.className.replace('btn-', '');
+                this.execBtn(textBtn)
             })
         })
     }
 
+    execBtn(value) {
+        switch (value) {
+            case 'ac':
+                this.clearAll();
+                break;
+            case 'ce':
+                this.cancelEntry();
+                break;
+            case 'plus':
+
+                break;
+            case 'minus':
+
+                break;
+            case 'times':
+
+                break;
+            case 'divide':
+
+                break;
+            case 'porcent':
+
+                break;
+            case 'dot':
+
+                break;
+            case 'equals':
+
+                break;
+            case '':
+            case '':
+            case '':
+            case '':
+            case '':
+            case '':
+            case '':
+            case '':
+            case '':
+            case '':
+
+                break;
+            default:
+                this.setError();
+        }
+    }
+
+
+    //====getters and setters====
     get displayCalc() {
         return this._displayCalcElement.innerHTML;
     }
@@ -85,5 +140,5 @@ initialize()  */
         this.currentDate = value;
     }
 
-} 
+}
 

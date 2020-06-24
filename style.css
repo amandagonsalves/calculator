@@ -45,9 +45,10 @@ body {
     font-family: 'Roboto Mono', monospace;
 }
 #buttons {
-    margin: 40px 30px;
+    
 }
-#buttons .btn {
+#buttons {
+    margin: 40px 30px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     list-style: none;
@@ -58,7 +59,7 @@ body {
     text-transform: uppercase;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-#buttons .btn li {
+#buttons li {
     display: flex;
     justify-content: center;
     align-items: center;

@@ -29,9 +29,10 @@ initialize()  */
         this.currentDate;
         this._locale = 'pt-BR';
 
-        this._displayCalcElement = document.querySelector('#display');
+        this._displayCalcElement = document.querySelector('#values');
         
         this.initialize();
+        this._operation = [];
     }
 
     initialize() {
@@ -46,6 +47,14 @@ initialize()  */
         this.displayTime = this.currentDate.toLocaleTimeString(this._locale);
     }
 
+    initButtosEvents() {
+        let buttons = document.querySelectorAll('#buttons > li');
+        buttons.forEach((btn, index) => {
+            btn.addEventListener('click', e => {
+                console.log('e')
+            })
+        })
+    }
 
     get displayCalc() {
         return this._displayCalcElement.innerHTML;

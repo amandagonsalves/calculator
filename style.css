@@ -41,6 +41,8 @@ body {
 #date, #time {
     background-color: rgba(0,0,0,0);
     border: none;
+    margin: 4.5px;
+    font-family: 'Roboto Mono', monospace;
 }
 #buttons {
     margin: 40px 30px;
@@ -65,6 +67,7 @@ body {
     height: 50px;
     background-color: rgb(109, 109, 173);
     box-shadow: 2px 2px rgb(131, 131, 131);
+    cursor: pointer;
 }
 .values p {
     text-align: right;

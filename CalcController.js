@@ -1,14 +1,15 @@
-/* const display = document.querySelector('#display');
+const display = document.querySelector('#display');
+
 
 function timeDate() {
+    
+    const currentDate = new Date();
 
     const time = document.querySelector('#time');
-    const now = new Date();
-    const timeEl = now.toLocaleTimeString('pt-BR');
+    const timeEl = currentDate.toLocaleTimeString('pt-BR');
     time.innerHTML = `<p>${timeEl}</p>`
 
     const date = document.querySelector('#date');
-    const currentDate = new Date();
     const dateEl = currentDate.toLocaleDateString('pt-BR');
     date.innerHTML = `<p>${dateEl}</p>`
 
@@ -19,8 +20,8 @@ function initialize() {
         timeDate()
     },1000)
 }
-initialize() */
-class CalcController {
+initialize() 
+/* class CalcController {
     constructor() {
 
         this._timeEl = document.querySelector('#time');
@@ -67,11 +68,11 @@ class CalcController {
     }
 
     initialize() {
-        this._timeEl.innerHTML = `010101`
+        
         setInterval(()=> {
             setDisplayDateTime()
         }, 1000) 
     }
 
-}
+} */
 

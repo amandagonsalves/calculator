@@ -52,7 +52,7 @@ initialize()  */
         let buttons = document.querySelectorAll('#buttons > li');
         buttons.forEach((btn, index) => {
             btn.addEventListener('click', e => {
-                console.log('e')
+                let textBtn = btn.className.replace('btn-', '');
             })
         })
     }

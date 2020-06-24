@@ -33,7 +33,7 @@ initialize()  */
         
         this.initialize();
         this._operation = [];
-        this.initButtosEvents();
+        this.initButtonsEvents();
     }
 
     initialize() {
@@ -48,7 +48,7 @@ initialize()  */
         this.displayTime = this.currentDate.toLocaleTimeString(this._locale);
     }
 
-    initButtosEvents() {
+    initButtonsEvents() {
         let buttons = document.querySelectorAll('#buttons > li');
         buttons.forEach((btn, index) => {
             btn.addEventListener('click', e => {

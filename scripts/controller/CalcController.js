@@ -77,6 +77,34 @@ class CalcController {
         this.displayCalc = 'Error';
     }
 
+    pushOperation(value) {
+        this._operation.push(value)
+        console.log(this._operation)
+    }
+
+    getLastOperation() {
+        return this._operation[this._operation.length - 1];
+    }
+
+    setLastOperation(value) {
+        return this._operation[this._operation.length - 1] = value;
+    }
+
+    isOperator(value) {
+        return (['+', '-', '*', '/', '%'].indexOf(value) > -1);
+    }
+
+    addOperation() {
+        if(isNaN(this.getLastOperation())) {
+            if(this.isOperator()) {
+                console.log('is opertor')
+            }
+        } else {
+            
+            console.log(' e numero')
+        }
+    }
+
     execBtn(value) {
         switch (value) {
             case 'ac':
@@ -106,17 +134,17 @@ class CalcController {
             case 'equals':
 
                 break;
-            case '':
-            case '':
-            case '':
-            case '':
-            case '':
-            case '':
-            case '':
-            case '':
-            case '':
-            case '':
-
+            case '0':
+            case '1':
+            case '2':
+            case '3':
+            case '4':
+            case '5':
+            case '6':
+            case '7':
+            case '8':
+            case '9':
+                this.addOperation();
                 break;
             default:
                 this.setError();

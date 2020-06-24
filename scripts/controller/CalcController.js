@@ -64,6 +64,19 @@ class CalcController {
         })
     }
 
+    clearAll() {
+        this._operation = [];
+        this.displayCalc = '0';
+    }
+
+    cancelEntry() {
+        this._operation.pop();
+    }
+
+    setError() {
+        this.displayCalc = 'Error';
+    }
+
     execBtn(value) {
         switch (value) {
             case 'ac':

@@ -142,7 +142,6 @@ class CalcController {
     }
 
     getResult() {
-
         return eval(this._operation.join(''))
     }
 
@@ -154,7 +153,9 @@ class CalcController {
         if(this._operation.length < 3) {
 
             let firstItem = this._operation[0];
-            this._operation = [firstItem,this._lastOperator,this._lastNumber];
+
+            this._operation = [firstItem, this._lastOperator, this._lastNumber];
+
         }
 
         if (this._operation.length > 3) {
@@ -168,7 +169,7 @@ class CalcController {
             this._lastNumber = this.getLastItem(false);
 
         }
-        console.log(this._lastNumber,this._lastOperator)
+        
         let result = this.getResult();
 
         if (last === '%') {
@@ -194,6 +195,7 @@ class CalcController {
     }
 
     getLastItem(isOperator = true) {
+
         let lastItem;
 
         for (let i = this._operation.length - 1; i >= 0; i--) {

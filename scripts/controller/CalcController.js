@@ -33,6 +33,7 @@ initialize()  */
         
         this.initialize();
         this._operation = [];
+        this.initButtosEvents();
     }
 
     initialize() {

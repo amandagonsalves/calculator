@@ -94,10 +94,21 @@ class CalcController {
         return (['+', '-', '*', '/', '%'].indexOf(value) > -1);
     }
 
+    getLastItem(isOperator=true) {
+        
+    }
+
+    setLastNumberToDisplay() {
+
+    }
+
     addOperation() {
         if(isNaN(this.getLastOperation())) {
-            if(this.isOperator()) {
-                console.log('is opertor')
+            if(this.isOperator(value)) {
+                this.setLastOperation(value);
+            } else {
+                this.pushOperation(value);
+                this.setLastNumberToDisplay();
             }
         } else {
             

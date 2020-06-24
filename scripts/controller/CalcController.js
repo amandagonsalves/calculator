@@ -398,6 +398,11 @@ class CalcController {
         return this._displayCalcElement.innerHTML;
     }
     set displayCalc(value) {
+
+        if(value.toString().length > 12) {
+            this.setError()
+            return false;
+        }
         this._displayCalcElement.innerHTML = value;
     }
 
